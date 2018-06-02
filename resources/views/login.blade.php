@@ -258,36 +258,43 @@
 			
 				<!-- Tab panes -->
 				<div class="tab-content">
-					<div class="tab-pane" id="home" role="tabpanel" data-mh="log-tab">
+					<div class="tab-pane active" id="home" role="tabpanel" data-mh="log-tab">
 						<div class="title h6">Register to Olympus</div>
-						<form class="content" action="{{ url('/login') }}"  method="post">
+						<form class="content" action="{{ url('/register') }}"  method="post">
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
+						
 							<div class="row">
+								<div class="col col-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
+									<div class="form-group label-floating is-empty">
+											<label class="control-label">Username</label>
+											<input class="form-control" placeholder="" type="text" name="username">
+									</div>
+								</div>
 								<div class="col col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12">
 									<div class="form-group label-floating is-empty">
 										<label class="control-label">First Name</label>
-										<input class="form-control" placeholder="" type="text">
+										<input class="form-control" placeholder="" type="text" name="fname">
 									</div>
 								</div>
 								<div class="col col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12">
 									<div class="form-group label-floating is-empty">
 										<label class="control-label">Last Name</label>
-										<input class="form-control" placeholder="" type="text">
+										<input class="form-control" placeholder="" type="text" name="lname">
 									</div>
 								</div>
 								<div class="col col-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
 									<div class="form-group label-floating is-empty">
 										<label class="control-label">Your Email</label>
-										<input class="form-control" placeholder="" type="email">
+										<input class="form-control" placeholder="" type="email" name="email">
 									</div>
 									<div class="form-group label-floating is-empty">
 										<label class="control-label">Your Password</label>
-										<input class="form-control" placeholder="" type="password">
+										<input class="form-control" placeholder="" type="password" name="password">
 									</div>
 			
 									<div class="form-group date-time-picker label-floating">
 										<label class="control-label">Your Birthday</label>
-										<input name="datetimepicker" value="10/24/1984" />
+										<input name="datetimepicker" value="10/24/1984" name="birthday"/>
 										<span class="input-group-addon">
 														<svg class="olymp-calendar-icon"><use xlink:href="{{ asset('template/app/svg-icons/sprites/icons.svg#olymp-calendar-icon')}}"></use></svg>
 													</span>
@@ -316,7 +323,7 @@
 						</form>
 					</div>
 			
-					<div class="tab-pane active" id="profile" role="tabpanel" data-mh="log-tab">
+					<div class="tab-pane" id="profile" role="tabpanel" data-mh="log-tab">
 						<div class="title h6">Login to your Account</div>
 						<form class="content" action="{{ url('/login') }}"  method="POST">
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">

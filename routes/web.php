@@ -19,5 +19,8 @@ Route::get('/','User\UserController@index' );
 
 Route::post('login', 'User\UserController@login');
 
+Route::post('register', 'User\UserController@register');
+
+Route::get('userinfo', 'User\UserController@userinfo');
 
 

@@ -35,13 +35,14 @@ class UserController extends Controller {
         if($response->getStatusCode()=='200'){
             $contents = $response->getBody()->getContents();
             $json = json_decode($contents);
-        
-          $id=$json->{'id'};
-        $userLogin =[
-            'user'=>$username,
-            'id'=> $id
-        ];
-            if($json->{'status'}){
+            $userLogin =[
+                'user'=>$json->{'username'},
+                'id'=> $json->{'id'},
+                'fname'=>$json->{'fname'},
+                'lname'=>$json->{'lname'},
+                'email'=>$json->{'email'},
+            ];
+            if($json->{'id'}!=null){
                 $request->session()->put('userLogin',   $userLogin);
                 return  view('landing')->with('userLogin',$userLogin ); 
             }else{
@@ -55,4 +56,75 @@ class UserController extends Controller {
 
 
     }
+
+    function register(Request $request){
+        $client = new Client();
+        $username = $request->input('username');
+        $fname = $request->input('fname');
+        $lname = $request->input('lname');
+        $email = $request->input('email');
+        $password = $request->input('password');
+        $birthday =$request->input('birthday');
+
+      //  $age = cal birthday
+
+        $memberM = [
+            'username' => $username,
+            'password' => $password,
+            'fname'=>$fname,
+            'lname'=>$lname,
+            'email'=>$email
+        ];
+        $headers = [
+
+            'Accept' => 'application/json',
+            'Content-type' => 'application/json'
+        ];
+       
+     
+       $response =   $client->request('POST', 'https://lab0api.herokuapp.com/api/member/createUser', [
+            'headers' => $headers,
+            'json' => $memberM
+
+        ]);
+
+        if($response->getStatusCode()=='200'){
+            $contents = $response->getBody()->getContents();
+
+            $json = json_decode($contents);
+            $userLogin =[
+                'user'=>$json->{'username'},
+                'id'=> $json->{'id'},
+                'fname'=>$json->{'fname'},
+                'lname'=>$json->{'lname'},
+                'email'=>$json->{'email'},
+            ];
+
+          $request->session()->put('userLogin',   $userLogin);
+          return  view('landing')->with('userLogin',$userLogin ); 
+        }else{
+            return back()->withInput();
+        }
+    }
+
+
+    function userinfo(Request $request){
+        $client = new Client();
+        $username = $request->input('username');
+        $headers = [
+            'Accept' => 'application/json',
+            'Content-type' => 'application/json'
+        ];
+        $response =   $client->request('GET', 'https://lab0api.herokuapp.com/api/member/userinfo/'.$username, [
+            'headers' => $headers
+        ]);
+
+        if($response->getStatusCode()=='200'){
+            $contents = $response->getBody()->getContents();
+            echo $contents;
+        }
+
+    }
+
+
 }
