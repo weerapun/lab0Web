@@ -23,4 +23,4 @@ Route::post('register', 'User\UserController@register');
 
 Route::get('userinfo', 'User\UserController@userinfo');
 
-
+Route::get('/test','User\UserController@index' );
