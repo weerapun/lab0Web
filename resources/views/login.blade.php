@@ -299,7 +299,7 @@
 														<svg class="olymp-calendar-icon"><use xlink:href="{{ asset('template/app/svg-icons/sprites/icons.svg#olymp-calendar-icon')}}"></use></svg>
 													</span>
 									</div>
-			
+			 
 									<div class="form-group label-floating is-select">
 										<label class="control-label">Your Gender</label>
 										<select class="selectpicker form-control">
