@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-	<title>Main Landing Page</title>
+	<title>Labolink</title>
 
 	<!-- Required meta tags always come first -->
 	<meta charset="utf-8">
@@ -48,12 +48,12 @@
 
 			<a href="#" class="logo">
 				<div class="img-wrap">
-					<img src="{{ secure_asset('template/app/img/logo.png')}}" alt="Olympus">
-					<img src="{{ secure_asset('template/app/img/logo-colored-small.png')}}" alt="Olympus" class="logo-colored">
+				<!--	<img src="{{ secure_asset('template/app/img/logo.png')}}" alt="Olympus">
+					<img src="{{ secure_asset('template/app/img/logo-colored-small.png')}}" alt="Olympus" class="logo-colored">-->
 				</div>
 				<div class="title-block">
-					<h6 class="logo-title">olympus</h6>
-					<div class="sub-title">SOCIAL NETWORK</div>
+					<h6 class="logo-title">Labolink</h6>
+					<div class="sub-title">JOB WORK SEARCH</div>
 				</div>
 			</a>
 
