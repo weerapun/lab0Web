@@ -259,7 +259,7 @@
 				<!-- Tab panes -->
 				<div class="tab-content">
 					<div class="tab-pane active" id="home" role="tabpanel" data-mh="log-tab">
-						<div class="title h6">Register to Olympus</div>
+						<div class="title h6">Register to Labolink</div>
 						<form class="content" action="{{ url('/register') }}"  method="post">
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
 						
