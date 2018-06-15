@@ -44,7 +44,7 @@ class UserController extends Controller {
             ];
             if($json->{'id'}!=null){
                 $request->session()->put('userLogin',   $userLogin);
-                return  view('landing')->with('userLogin',$userLogin ); 
+                return  view('loginSuccess')->with('userLogin',$userLogin ); 
             }else{
 
                 // send error msg

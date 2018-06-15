@@ -230,12 +230,9 @@
 		<div class="col col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
 			<div class="landing-content">
 				<h1>
-				Thank you for registration.  : {{$userLogin['user'] }}
+				    Our system will be available soon
                 </h1>
-				<h1>
-                   ID : {{$userLogin['id'] }}
-				   
-                </h1>
+				
 			</div>
 		</div>
    
