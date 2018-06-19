@@ -350,14 +350,14 @@
 								
 									<input type="submit" name="login" class="btn btn-lg btn-primary full-width" value="Login" />
 									<!--<a href="#" class="btn btn-lg btn-primary full-width">Login</a>-->
-			
+			<!--
 									<div class="or"></div>
 			
 									<a href="#" class="btn btn-lg bg-facebook full-width btn-icon-left"><i class="fab fa-facebook-f" aria-hidden="true"></i>Login with Facebook</a>
 			
 									<a href="#" class="btn btn-lg bg-twitter full-width btn-icon-left"><i class="fab fa-twitter" aria-hidden="true"></i>Login with Twitter</a>
 			
-			
+			-->
 									<p>Don’t you have an account? <a href="#">Register Now!</a> it’s really simple and you can start enjoing all the benefits!</p>
 								</div>
 							</div>
