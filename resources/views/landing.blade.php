@@ -10,7 +10,7 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 
 	<!-- Main Font -->
-	<script src="{{ secure_asset('template/app/js/webfontloader.min.js')}}"></script>
+	<script src="{{ asset('template/app/js/webfontloader.min.js')}}"></script>
 	<script>
 		WebFont.load({
 			google: {
