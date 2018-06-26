@@ -64,9 +64,7 @@ class UserController extends Controller {
         $lname = $request->input('lname');
         $email = $request->input('email');
         $password = $request->input('password');
-        $birthday =$request->input('birthday');
-
-      //  $age = cal birthday
+        $birthDate =$request->input('birthday');
 
         $memberM = [
             'username' => $username,

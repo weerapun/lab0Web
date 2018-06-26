@@ -266,29 +266,29 @@
 								<div class="col col-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
 									<div class="form-group label-floating is-empty">
 											<label class="control-label">Username</label>
-											<input class="form-control" placeholder="" type="text" name="username">
+											<input class="form-control" placeholder="" type="text" name="username" required="required">
 									</div>
 								</div>
 								<div class="col col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12">
 									<div class="form-group label-floating is-empty">
 										<label class="control-label">First Name</label>
-										<input class="form-control" placeholder="" type="text" name="fname">
+										<input class="form-control" placeholder="" type="text" name="fname" required="required">
 									</div>
 								</div>
 								<div class="col col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12">
 									<div class="form-group label-floating is-empty">
 										<label class="control-label">Last Name</label>
-										<input class="form-control" placeholder="" type="text" name="lname">
+										<input class="form-control" placeholder="" type="text" name="lname" required="required">
 									</div>
 								</div>
 								<div class="col col-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
 									<div class="form-group label-floating is-empty">
 										<label class="control-label">Your Email</label>
-										<input class="form-control" placeholder="" type="email" name="email">
+										<input class="form-control" placeholder="" type="email" name="email" required="required">
 									</div>
 									<div class="form-group label-floating is-empty">
 										<label class="control-label">Your Password</label>
-										<input class="form-control" placeholder="" type="password" name="password">
+										<input class="form-control" placeholder="" type="password" name="password" required="required">
 									</div>
 			
 									<div class="form-group date-time-picker label-floating">
@@ -330,11 +330,11 @@
 								<div class="col col-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
 									<div class="form-group label-floating is-empty">
 										<label class="control-label">Your Username</label>
-										<input class="form-control" placeholder="" type="text" name="username">
+										<input class="form-control" placeholder="" type="text" name="username" required="required" pattern="[A-Za-z0-9]{1,20}">
 									</div>
 									<div class="form-group label-floating is-empty">
 										<label class="control-label">Your Password</label>
-										<input class="form-control" placeholder="" type="password" name="password">
+										<input class="form-control" placeholder="" type="password" name="password" required="required" pattern="[A-Za-z0-9]{1,20}">
 									</div>
 			
 									<div class="remember">
@@ -347,11 +347,28 @@
 										</div>
 										<a href="#" class="forgot">Forgot my Password</a>
 									</div>
+									<div id="fb-root"></div>
+								<!--	<script>
+											(function(d, s, id) {
+											var js, fjs = d.getElementsByTagName(s)[0];
+											if (d.getElementById(id)) return;
+											js = d.createElement(s); js.id = id;
+											js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=460399737735474&autoLogAppEvents=1';
+											fjs.parentNode.insertBefore(js, fjs);
+											}(document, 'script', 'facebook-jssdk'));
+									</script> -->
+
+									
+									<div class="col-md-12">
+											<div class="col-md-12"> <input type="submit" name="login" class="btn btn-lg btn-primary full-width" value="Login" /></div>
+									
+									<div class="or"></div>
+									<div class="fb-login-button center col-md-12" data-width="300px" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
 								
-									<input type="submit" name="login" class="btn btn-lg btn-primary full-width" value="Login" />
+									</div>
 									<!--<a href="#" class="btn btn-lg btn-primary full-width">Login</a>-->
 			<!--
-									<div class="or"></div>
+								
 			
 									<a href="#" class="btn btn-lg bg-facebook full-width btn-icon-left"><i class="fab fa-facebook-f" aria-hidden="true"></i>Login with Facebook</a>
 			
