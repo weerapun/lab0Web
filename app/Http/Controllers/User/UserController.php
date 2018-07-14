@@ -4,19 +4,23 @@ use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Log;
 
 class UserController extends Controller {
 
      function index(){
-        return view('login');
+        $error =[
+            'msg'=>null
+        ];
+        return view('login',['error'=>$error]);
     } 
      function login(Request $request){
         $client = new Client();
-        $username = $request->input('username');
+        $email = $request->input('email');
         $password = $request->input('password');
 
         $memberM = [
-            'username' => $username,
+            'email' => $email,
             'password' => $password
         ];
 
@@ -36,7 +40,6 @@ class UserController extends Controller {
             $contents = $response->getBody()->getContents();
             $json = json_decode($contents);
             $userLogin =[
-                'user'=>$json->{'username'},
                 'id'=> $json->{'id'},
                 'fname'=>$json->{'fname'},
                 'lname'=>$json->{'lname'},
@@ -59,19 +62,21 @@ class UserController extends Controller {
 
     function register(Request $request){
         $client = new Client();
-        $username = $request->input('username');
+        $lineId = $request->input('lineId');
         $fname = $request->input('fname');
         $lname = $request->input('lname');
         $email = $request->input('email');
         $password = $request->input('password');
-        $birthDate =$request->input('birthday');
-
+        $birthdate =$request->input('datetimepicker');
+        Log::info('************** birthDate *************** '.$birthdate);
+       
         $memberM = [
-            'username' => $username,
+            'lineId' => $lineId,
             'password' => $password,
             'fname'=>$fname,
             'lname'=>$lname,
-            'email'=>$email
+            'email'=>$email,
+            'birthday'=>$birthdate
         ];
         $headers = [
 
@@ -85,21 +90,31 @@ class UserController extends Controller {
             'json' => $memberM
 
         ]);
-
+        Log::info('************** response *************** '.$response->getStatusCode());
         if($response->getStatusCode()=='200'){
             $contents = $response->getBody()->getContents();
-
             $json = json_decode($contents);
-            $userLogin =[
-                'user'=>$json->{'username'},
-                'id'=> $json->{'id'},
-                'fname'=>$json->{'fname'},
-                'lname'=>$json->{'lname'},
-                'email'=>$json->{'email'},
-            ];
-
-          $request->session()->put('userLogin',   $userLogin);
-          return  view('landing')->with('userLogin',$userLogin ); 
+            Log::info('contents :'.$contents);
+            $error= null;
+           
+            if($json->{'status'}=='false'){
+                Log::info('error :'.$json->{'msg'});
+                $error =[
+                    'msg'=> $json->{'msg'}
+                ];
+              
+                return view('login',['error'=>$error]);
+            }else{
+                $userLogin =[
+                    'id'=> $json->{'id'},
+                    'fname'=>$json->{'fname'},
+                    'lname'=>$json->{'lname'},
+                    'email'=>$json->{'email'},
+                ];
+                $request->session()->put('userLogin',   $userLogin);
+              return  view('landing')->with('userLogin',$userLogin ); 
+            }
+            
         }else{
             return back()->withInput();
         }
@@ -108,12 +123,12 @@ class UserController extends Controller {
 
     function userinfo(Request $request){
         $client = new Client();
-        $username = $request->input('username');
+        $email = $request->input('email');
         $headers = [
             'Accept' => 'application/json',
             'Content-type' => 'application/json'
         ];
-        $response =   $client->request('GET', 'https://lab0api.herokuapp.com/api/member/userinfo/'.$username, [
+        $response =   $client->request('GET', 'https://lab0api.herokuapp.com/api/member/userinfo/'.$email, [
             'headers' => $headers
         ]);
 

@@ -130,13 +130,13 @@
 						<li class="close-responsive-menu js-close-responsive-menu">
 							<svg class="olymp-close-icon"><use xlink:href="{{ asset('template/app/svg-icons/sprites/icons.svg#olymp-close-icon')}}"></use></svg>
 						</li>
-						<li class="nav-item js-expanded-menu">
+						<!-- <li class="nav-item js-expanded-menu">
 							<a href="#" class="nav-link">
 								<svg class="olymp-menu-icon"><use xlink:href="{{ asset('template/app/svg-icons/sprites/icons.svg#olymp-menu-icon')}}"></use></svg>
 								<svg class="olymp-close-icon"><use xlink:href="{{ asset('template/app/svg-icons/sprites/icons.svg#olymp-close-icon')}}"></use></svg>
 							</a>
-						</li>
-						<li class="shoping-cart more">
+						</li> -->
+						<!-- <li class="shoping-cart more">
 							<a href="#" class="nav-link">
 								<svg class="olymp-shopping-bag-icon"><use xlink:href="{{ asset('template/app/svg-icons/sprites/icons.svg#olymp-shopping-bag-icon')}}"></use></svg>
 								<span class="count-product">2</span>
@@ -214,7 +214,7 @@
 									<a href="#" class="btn btn-purple btn-sm">Go to Checkout</a>
 								</div>
 							</div>
-						</li>
+						</li> -->
 					</ul>
 				</div>
 			</div>
@@ -229,18 +229,21 @@
 <div class="row display-flex">
 		<div class="col col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
 			<div class="landing-content">
-				<h1>
-				Thank you for registration.  : {{$userLogin['user'] }}
-                </h1>
-				<h1>
-                   ID : {{$userLogin['id'] }}
-				   
-                </h1>
+			@if ($userLogin)
+				<h1>Thank you for registration.  : {{$userLogin['email'] }}</h1>
+				<h1> ID : {{$userLogin['id'] }}</h1>
+			@endif
+			
 			</div>
+			
 		</div>
-   
+		
+		
       
 	</div>
+	<div class="col col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+			<a href="/" class="btn btn-purple btn-lg full-width">Logout</a>
+		</div>
 </div>
 
 

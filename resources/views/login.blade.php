@@ -52,14 +52,14 @@
 					<img src="{{ asset('template/app/img/logo-colored-small.png')}}" alt="Olympus" class="logo-colored">-->
 				</div>
 				<div class="title-block">
-					<h6 class="logo-title">Labolink</h6>
-					<div class="sub-title">JOB WORK SEARCH</div>
+					<h3 class="logo-title">Labolink</h3>
+					<div class="sub-title text-center">JOB WORK SEARCH</div>
 				</div>
 			</a>
 
-			<a href="#" class="open-responsive-menu js-open-responsive-menu">
+			<!-- <a href="#" class="open-responsive-menu js-open-responsive-menu">
 				<svg class="olymp-menu-icon"><use xlink:href="{{ asset('template/app/svg-icons/sprites/icons.svg#olymp-menu-icon')}}"></use></svg>
-			</a>
+			</a> -->
 
 			<div class="nav nav-pills nav1 header-menu">
 				<div class="mCustomScrollbar">
@@ -130,13 +130,13 @@
 						<li class="close-responsive-menu js-close-responsive-menu">
 							<svg class="olymp-close-icon"><use xlink:href="{{ asset('template/app/svg-icons/sprites/icons.svg#olymp-close-icon')}}"></use></svg>
 						</li>
-						<li class="nav-item js-expanded-menu">
+						<!-- <li class="nav-item js-expanded-menu">
 							<a href="#" class="nav-link">
 								<svg class="olymp-menu-icon"><use xlink:href="{{ asset('template/app/svg-icons/sprites/icons.svg#olymp-menu-icon')}}"></use></svg>
 								<svg class="olymp-close-icon"><use xlink:href="{{ asset('template/app/svg-icons/sprites/icons.svg#olymp-close-icon')}}"></use></svg>
 							</a>
-						</li>
-						<li class="shoping-cart more">
+						</li> -->
+						<!-- <li class="shoping-cart more">
 							<a href="#" class="nav-link">
 								<svg class="olymp-shopping-bag-icon"><use xlink:href="{{ asset('template/app/svg-icons/sprites/icons.svg#olymp-shopping-bag-icon')}}"></use></svg>
 								<span class="count-product">2</span>
@@ -214,7 +214,7 @@
 									<a href="#" class="btn btn-purple btn-sm">Go to Checkout</a>
 								</div>
 							</div>
-						</li>
+						</li> -->
 					</ul>
 				</div>
 			</div>
@@ -230,9 +230,37 @@
 		<div class="col col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
 			<div class="landing-content">
 				<h1>Welcome to the Labol</h1>
-				<p>Our service will be available soon. Please stay tune
-				</p>
-				<a href="#" class="btn btn-md btn-border c-white">Register Now!</a>
+				<h6> สร้างสังคม ออนไลน์เพื่อผู้ประกอบการและผู้สมัครงาน
+				สามารถเข้าสรรหาบุคลากรและงานที่ตรงกับความต้องการได้ตลอด
+				เป็นช่องทางเสริมสร้างสัมพันธภาพที่ดีระหว่างผู้ประกอบการ
+				และผู้สมัครงานด้วยการบริการที่โดดเด่นแบบ online
+				ซึ่งนำเทคโนโลยีมาพัฒนาอย่างสร้างสรรค์เพื่องานด้านบริหารสรรหาได้อย่างทันท่วงที
+				และตอบสนองความต้องการให้กลุ่มเป้าหมายได้อย่างคุ้มค่า คล่องตัว ประหยัดเวลา และเกิดประสิทธิภาพสูงสุด</h6>
+			
+				<!-- <a href="#" class="btn btn-md btn-border c-white">Register Now!</a> -->
+			</div>
+
+			<div class="landing-content">
+				<h3>ได้งานง่ายๆ ใน 3 ขั้นตอน</h3>
+				<div class="row">
+					<div class="col col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 text-center">
+						<div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 center"><h6 style=" color: white; ">สร้างโปรไฟล์</h6></div>
+						<div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 center"><img src="{{ asset('template/src/img/info2.png')}}"  style=" padding: 10px; "></div>
+						<div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 center">สร้างโปรไฟล์ง่ายๆ โดยกรอกข้อมูลการสมัคร กับ Labolink</div>
+					</div>
+					<div class="col col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 text-center">
+						<div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12"><h6 style=" color: white; ">Add Line</h6></div>
+						<div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12"><img src="{{ asset('template/src/img/labolineId.png')}}"  style=" padding: 10px; "></div>
+						<div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">Add Line Labolink ผ่าน QRCode</div>
+					</div>
+					<div class="col col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 text-center">
+						<div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12"><h6 style=" color: white; ">รอติดต่อกลับรับงานที่ใช่</h6></div>
+						<div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12"><img src="{{ asset('template/src/img/info3.png')}}"  style=" padding: 10px; "></div>
+						<div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">อ่านข้อมูลบริษัท กดสมัครงาน รอเรียกสัมภาษณ์งาน</div>
+					</div>
+				</div>
+			
+				<!-- <a href="#" class="btn btn-md btn-border c-white">Register Now!</a> -->
 			</div>
 		</div>
 
@@ -240,9 +268,9 @@
 			
 			<!-- Login-Registration Form  -->
 			
-			<div class="registration-login-form">
+			<div class="registration-login-form" style="padding-top: 0px;">
 				<!-- Nav tabs -->
-				<ul class="nav nav-tabs" role="tablist">
+				<!-- <ul class="nav nav-tabs" role="tablist">
 					<li class="nav-item">
 						<a class="nav-link active" data-toggle="tab" href="#home" role="tab">
 							<svg class="olymp-login-icon"><use xlink:href="{{ asset('template/app/svg-icons/sprites/icons.svg#olymp-login-icon')}}"></use></svg>
@@ -253,20 +281,30 @@
 							<svg class="olymp-register-icon"><use xlink:href="{{ asset('template/app/svg-icons/sprites/icons.svg#olymp-register-icon')}}"></use></svg>
 						</a>
 					</li>
-				</ul>
+				</ul> -->
 			
 				<!-- Tab panes -->
 				<div class="tab-content">
-					<div class="tab-pane active" id="home" role="tabpanel" data-mh="log-tab">
+					<divdiv class="tab-pane active" id="home" role="tabpanel" data-mh="log-tab">
 						<div class="title h6">Register to Labolink</div>
 						<form class="content" action="{{ url('/register') }}"  method="post">
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
-						
+									@if ($error['msg'])
+										<div class="alert alert-danger">
+											{{ $error['msg'] }}
+										</div>
+									@endif
 							<div class="row">
 								<div class="col col-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
 									<div class="form-group label-floating is-empty">
-											<label class="control-label">Username</label>
-											<input class="form-control" placeholder="" type="text" name="username" required="required">
+										<label class="control-label">Your Email</label>
+										<input class="form-control" placeholder="" type="email" name="email" required="required">
+									</div>
+								</div>
+								<div class="col col-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
+									<div class="form-group label-floating is-empty">
+											<label class="control-label">Line Id</label>
+											<input class="form-control" placeholder="" type="text" name="lineId">
 									</div>
 								</div>
 								<div class="col col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12">
@@ -283,46 +321,37 @@
 								</div>
 								<div class="col col-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
 									<div class="form-group label-floating is-empty">
-										<label class="control-label">Your Email</label>
-										<input class="form-control" placeholder="" type="email" name="email" required="required">
+										<label class="control-label">Your Telephone</label>
+										<input class="form-control" placeholder="" type="text" name="tel" required="required">
 									</div>
-									<div class="form-group label-floating is-empty">
-										<label class="control-label">Your Password</label>
-										<input class="form-control" placeholder="" type="password" name="password" required="required">
-									</div>
-			
+								</div>
+								<div class="col col-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
 									<div class="form-group date-time-picker label-floating">
 										<label class="control-label">Your Birthday</label>
-										<input name="datetimepicker" value="10/24/1984" name="birthday"/>
+										<input name="datetimepicker" value="10/24/1958" name="birthday"/>
 										<span class="input-group-addon">
 														<svg class="olymp-calendar-icon"><use xlink:href="{{ asset('template/app/svg-icons/sprites/icons.svg#olymp-calendar-icon')}}"></use></svg>
 													</span>
 									</div>
-			 
-									<div class="form-group label-floating is-select">
-										<label class="control-label">Your Gender</label>
-										<select class="selectpicker form-control">
-											<option value="MA">Male</option>
-											<option value="FE">Female</option>
-										</select>
-									</div>
-			
-									<div class="remember">
+			 					</div>
+								
+									<!-- <div class="remember">
 										<div class="checkbox">
 											<label>
 												<input name="optionsCheckboxes" type="checkbox">
 												I accept the <a href="#">Terms and Conditions</a> of the website
 											</label>
 										</div>
-									</div>
+									</div> -->
 									<input type="submit" name="registration" class="btn btn-lg btn-primary full-width" value="Complete Registration!" />
 								<!--	<a href="#" class="btn btn-purple btn-lg full-width">Complete Registration!</a>-->
+
 								</div>
 							</div>
 						</form>
 					</div>
 			
-					<div class="tab-pane" id="profile" role="tabpanel" data-mh="log-tab">
+					<!-- <div class="tab-pane" id="profile" role="tabpanel" data-mh="log-tab">
 						<div class="title h6">Login to your Account</div>
 						<form class="content" action="{{ url('/login') }}"  method="POST">
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -359,10 +388,10 @@
 									</script> -->
 
 									
-									<div class="col-md-12">
+									<!-- <div class="col-md-12">
 											<div class="col-md-12"> <input type="submit" name="login" class="btn btn-lg btn-primary full-width" value="Login" /></div>
 									
-									<div class="or"></div>
+									<div class="or"></div> -->
 									<div class="fb-login-button center col-md-12" data-width="300px" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
 								
 									</div>
@@ -375,11 +404,11 @@
 									<a href="#" class="btn btn-lg bg-twitter full-width btn-icon-left"><i class="fab fa-twitter" aria-hidden="true"></i>Login with Twitter</a>
 			
 			-->
-									<p>Don’t you have an account? <a href="#">Register Now!</a> it’s really simple and you can start enjoing all the benefits!</p>
+									<!-- <p>Don’t you have an account? <a href="#">Register Now!</a> it’s really simple and you can start enjoing all the benefits!</p>
 								</div>
 							</div>
 						</form>
-					</div>
+					</div> -->
 				</div>
 			</div>
 			
