@@ -322,7 +322,7 @@
 								<div class="col col-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
 									<div class="form-group label-floating is-empty">
 										<label class="control-label">Your Telephone</label>
-										<input class="form-control" placeholder="" type="text" name="tel" required="required">
+										<input class="form-control" placeholder="" type="number" name="tel" required="required">
 									</div>
 								</div>
 								<div class="col col-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
