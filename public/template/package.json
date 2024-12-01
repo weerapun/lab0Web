@@ -64,6 +64,7 @@
   "dependencies": {
     "bootstrap": "^4.0.0",
     "del": "^2.2.2",
-    "gulp-svgmin": "^1.2.4"
+    "gulp-svgmin": "^1.2.4",
+    "Olympus": "file:"
   }
 }
